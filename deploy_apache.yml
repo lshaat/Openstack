@@ -21,4 +21,6 @@
 - hosts: "{{ deployment_name }}"   
   tasks:
    - name: Coneection Check
-     ping:
+     yum:
+       name: httpd
+       state: present
